@@ -53,6 +53,7 @@ h6  {font-size: 75%}
 em {color: #7f0000; font-weight: 400;}
 
 p.standout, div.row.standout {
+    font-family:"Hoefler Text", "Didot", Georgia, serif;
     font-size:120%;
     line-height: 1.5;
     font-weight: 400;
@@ -91,6 +92,7 @@ ul.plugin-list li span.site-name    {
     border: none;
 }
 
+ul.personlist li {margin: .8em 0;}
 /* ----------------- arkestra_navigation.css ----------------- */
 
 ul.menu	{ /* the whole thing */
