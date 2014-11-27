@@ -1,5 +1,7 @@
 # Django settings for djangocon_europe project.
 
+from secret_settings import DATABASES, SECRET_KEY
+
 import os.path
 
 # Make it work straight from the checkout!
@@ -18,16 +20,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'djangocon',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
-}
 
 CACHES = {
     'default': {
@@ -102,9 +94,6 @@ STATICFILES_FINDERS = (
     # 'legacy_finders.LegacyAppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
-
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '+l!v($pn27-@l_7=9&amp;r-^wl!cqyn=yi3npu9dv02@c@th-or7n'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
