@@ -40,3 +40,7 @@ _tmp
 dist
 build
 _build
+filer_public
+filer_public_thumbnails
+
+secret_settings.py
