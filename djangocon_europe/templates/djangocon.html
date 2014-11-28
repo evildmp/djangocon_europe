@@ -5,6 +5,10 @@
     <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/djangocon.css" />
 {% endblock site_styles %}
 
+{% block favicon %}
+    <link rel="icon" type="image/png" href="{{ MEDIA_URL }}favicon.png">
+{% endblock favicon %}
+
 {% block body_content %}
     {# do you need to have different widths in this template? manage them like this: with placeholder_width=960 generic_main_width=523 sidebar_image_size="294x196" person_image_size="445x384" #}
         {{ block.super }}
