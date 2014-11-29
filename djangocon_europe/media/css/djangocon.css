@@ -141,10 +141,15 @@ ul#tab-menu .active span {
 	padding: 0.1em 1.2em;
     }
 
+/* ----------------- lists ----------------- */
 #main-page-body ul   {list-style: square inside; margin: .25em 0 1em;}
 #main-page-body ul li  {line-height: 1.5;}
 
-/* presentation editor styles */
+/* ----------------- misc ----------------- */
+
+.accessibility {text-indent: 100%; white-space: nowrap; overflow: hidden;}
+
+/* ----------------- semantic presentation editor ----------------- */
 
 p.standout, div.row.standout {
     font-family:"Hoefler Text", "Didot", Georgia, serif;
