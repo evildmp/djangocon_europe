@@ -1,9 +1,5 @@
 {% extends entity.get_template %}
-{% comment %}
 
-Extends the base page template, and includes the main_page_body_file specified in the view.
-
-{% endcomment %}
 {% load typogrify_tags entity_tags thumbnail placeholder_tags %}
 
 {% block title %}
@@ -19,6 +15,7 @@ Extends the base page template, and includes the main_page_body_file specified i
 {% block skip_and_language %}
 {% endblock %}
 
+
 {% block main_page_body %}
 
     {% thumbnail entity.image.file entity_image_size crop subject_location=entity.image.subject_location as image %}
@@ -29,16 +26,14 @@ Extends the base page template, and includes the main_page_body_file specified i
             {% render_placeholder intro_page_placeholder %}
 
             <div class="column firstcolumn doublecolumn">
-                <div class = "">
-                    <h{{ IN_BODY_HEADING_LEVEL }}>Contact information</h{{ IN_BODY_HEADING_LEVEL }}>
-                    <dl class="not-indented">
-                        {% include "includes/key_contacts.html" %}
-                        {% with entity_map_size as map_size %}
-                            {% include "includes/contact_information.html" %}
-                        {% endwith %}
-                    </dl>
-                    {% if image %}<img src="{{ image.url }}" alt = "" class="right"/>{% endif %}
-                </div>
+                <h{{ PAGE_TITLE_HEADING_LEVEL }}>Contact information</h{{ PAGE_TITLE_HEADING_LEVEL }}>
+                <dl class="not-indented">
+                    {% include "includes/key_contacts.html" %}
+                    {% with entity_map_size as map_size %}
+                        {% include "includes/contact_information.html" %}
+                    {% endwith %}
+                </dl>
+                {% if image %}<img src="{{ image.url }}" alt = "" class="right"/>{% endif %}
             </div>
 
             {% if entity.get_people_with_roles or initials_list or people %}
@@ -54,7 +49,7 @@ Extends the base page template, and includes the main_page_body_file specified i
                     {% else %}
                         {% if entity.get_key_people %}
                             <div class="">
-                                <h{{ IN_BODY_HEADING_LEVEL }}>Key people</h{{ IN_BODY_HEADING_LEVEL }}>
+                                <h{{ PAGE_TITLE_HEADING_LEVEL }}>Key people</h{{ PAGE_TITLE_HEADING_LEVEL }}>
                                 {% regroup entity.get_key_people by role as roles %}
                                 <dl class="not-indented personlist">
                                     {% for role in roles %}
@@ -69,7 +64,7 @@ Extends the base page template, and includes the main_page_body_file specified i
                         {% endif %}
                     {% endif %}
                     {% if initials_list %}
-                        <h{{ IN_BODY_HEADING_LEVEL }}>All people A-Z by surname</h{{ IN_BODY_HEADING_LEVEL }}>
+                        <h{{ PAGE_TITLE_HEADING_LEVEL }}>All people A-Z by surname</h{{ PAGE_TITLE_HEADING_LEVEL }}>
                         <ul class= "index">
                             {% for initial in initials_list %}
                                 <li><a href="{% url contact-people-letter entity.slug,initial|lower %}">{{ initial }}</a></li>
@@ -77,7 +72,7 @@ Extends the base page template, and includes the main_page_body_file specified i
                         </ul>
                     {% endif %}
                     {% if people %}
-                        <h{{ IN_BODY_HEADING_LEVEL }}>{{ people_list_heading }}</h{{ IN_BODY_HEADING_LEVEL }}>
+                        <h{{ PAGE_TITLE_HEADING_LEVEL }}>{{ people_list_heading }}</h{{ PAGE_TITLE_HEADING_LEVEL }}>
                         {% include "includes/people_with_roles.html" %}
                     {% endif %}
                 </div>
