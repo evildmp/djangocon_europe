@@ -70,6 +70,8 @@ ul.plugin-list li span.site-name    {
 ul.personlist li {margin: .8em 0; list-style: none;}
 dl dt {margin-top: 0.8em;}
 
+ul.plugin-list li.grouper {font-weight: 300;}
+
 /* ----------------- site navigation ----------------- */
 
 /* the whole thing */
