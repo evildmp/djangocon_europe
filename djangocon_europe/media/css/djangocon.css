@@ -72,6 +72,11 @@ dl dt {margin-top: 0.8em;}
 
 ul.plugin-list li.grouper {font-weight: 300;}
 
+/* built-in classes for typogrify_tags */
+
+.amp {font-size: 105%; font-family: "Hoefler Text", "Didot", Georgia, serif;
+    font-style:italic; font-weight: 300;}
+
 /* ----------------- site navigation ----------------- */
 
 /* the whole thing */
@@ -157,7 +162,7 @@ ul#tab-menu .active span {
 
 /* ----------------- semantic presentation editor ----------------- */
 
-p.standout, div.row.standout {
+p.standout, div.row.standout, p.subtitle {
     font-family:"Hoefler Text", "Didot", Georgia, serif;
     font-size:120%;
     line-height: 1.5;
