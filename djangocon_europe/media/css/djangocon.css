@@ -54,7 +54,7 @@ div.footer  {
 
 /* for the minimal template, for very short pages */
 body.minimal div#outer-wrapper {padding-top: 80px;}
-body.minimal div#page-title {display: none;}
+body.minimal div#pagetitle {display: none;}
 
 /* ----------------- arkestra built-in classes ----------------- */
 
