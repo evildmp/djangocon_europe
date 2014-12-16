@@ -1,8 +1,7 @@
 {% extends "arkestra.html" %}
 {% load typogrify_tags cms_tags %}
 
-{% block body_attributes %}{{ block.super }}{% page_attribute "slug" as home_test %}
-{% ifequal home_test "home" %} class="minimal" {% endifequal %}{% endblock body_attributes %}
+{% block body_attributes %}{{ block.super }}{% page_attribute "slug" as home_test %}{% ifequal home_test "home" %}{% if not entity %} class="minimal" {% endif %}{% endifequal %}{% endblock body_attributes %}
 
 {% block site_styles %}
     <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/djangocon.css" />
@@ -12,7 +11,7 @@
     <link rel="icon" type="image/png" href="{{ MEDIA_URL }}favicon.png">
 {% endblock favicon %}
 
-{% block body_content %}{% ifequal home_test "home" %}class="minimal" {% endifequal %}{{ home_test }}
+{% block body_content %}
     <p class="accessibility">DjangoCon Europe, 2nd to 7th June 2015, in Cardiff, Wales.
         6 days of talks, tutorials and code.</p>
     {# do you need to have different widths in this template? manage them like this: with placeholder_width=960 generic_main_width=523 sidebar_image_size="294x196" person_image_size="445x384" #}
