@@ -173,6 +173,8 @@ INSTALLED_APPS = (
     'video',
     'housekeeping',
 
+    # "facts",
+
     # other applications
 
     'polymorphic',
@@ -254,11 +256,84 @@ except ImportError:
 
 # ------------------------ Django Filer
 
-FILER_FILE_MODELS = (
-        'video.models.Video',
-        'filer.models.imagemodels.Image',
-        'filer.models.filemodels.File',
-    )
+# FILER_FILE_MODELS = (
+#         'video.models.Video',
+#         'filer.models.imagemodels.Image',
+#         'filer.models.filemodels.File',
+#     )
+#
+# DEFAULT_FILER_STORAGES = {
+#     'public': {
+#         'main': {
+#             'ENGINE': DEFAULT_FILE_STORAGE,
+#             'OPTIONS': {},
+#             'UPLOAD_TO': 'filer.utils.generate_filename.randomized',
+#             'UPLOAD_TO_PREFIX': 'filer_public',
+#         },
+#         'thumbnails': {
+#             'ENGINE': DEFAULT_FILE_STORAGE,
+#             'OPTIONS': {},
+#             'THUMBNAIL_OPTIONS': {
+#                 'base_dir': 'filer_public_thumbnails',
+#             },
+#         },
+#     },
+#     'private': {
+#         'main': {
+#             'ENGINE': 'filer.storage.PrivateFileSystemStorage',
+#             'OPTIONS': {
+#                 'location': os.path.abspath(os.path.join(settings.MEDIA_ROOT, '../smedia/filer_private')),
+#                 'base_url': '/smedia/filer_private/',
+#             },
+#             'UPLOAD_TO': 'filer.utils.generate_filename.randomized',
+#             'UPLOAD_TO_PREFIX': '',
+#         },
+#         'thumbnails': {
+#             'ENGINE': 'filer.storage.PrivateFileSystemStorage',
+#             'OPTIONS': {
+#                 'location': os.path.abspath(os.path.join(settings.MEDIA_ROOT, '../smedia/filer_private_thumbnails')),
+#                 'base_url': '/smedia/filer_private_thumbnails/',
+#             },
+#             'THUMBNAIL_OPTIONS': {},
+#         },
+#     },
+# }
+
+FILER_STORAGES = {
+    'public': {
+        'main': {
+            'ENGINE': 'django.core.files.storage.FileSystemStorage',
+            'UPLOAD_TO_PREFIX': 'filer_public',
+            'UPLOAD_TO': 'filer.utils.generate_filename.by_date',
+            'OPTIONS': {}},
+        'thumbnails': {
+            'ENGINE': 'django.core.files.storage.FileSystemStorage',
+            'THUMBNAIL_OPTIONS': {
+                'base_dir': 'filer_public_thumbnails'
+            },
+            'OPTIONS': {}
+        }
+    },
+    'private': {
+        'main': {
+            'ENGINE': 'filer.storage.PrivateFileSystemStorage',
+            'UPLOAD_TO_PREFIX': '',
+            'UPLOAD_TO': 'filer.utils.generate_filename.randomized',
+            'OPTIONS': {
+                'location': '/Users/divio/djangoconeurope/djangocon_europe/djangocon_europe/smedia/filer_private',
+                'base_url': '/smedia/filer_private/'
+            }
+        }, 'thumbnails': {
+            'ENGINE': 'filer.storage.PrivateFileSystemStorage',
+            'THUMBNAIL_OPTIONS': {},
+            'OPTIONS': {
+                'location': '/Users/divio/djangoconeurope/djangocon_europe/djangocon_europe/smedia/filer_private_thumbnails',
+                'base_url': '/smedia/filer_private_thumbnails/'
+            }
+        }
+    }
+}
+
 
 # ------------------------ Django CMS
 
