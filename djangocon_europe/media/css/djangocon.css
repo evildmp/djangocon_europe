@@ -188,6 +188,11 @@ p.subtitle.place {border: none;}
 }
 p.centre {text-align: center; margin-top: 5em; color: #7f0000; font-weight: 300;}
 
+/* ----------------- tables ----------------- */
+
+table th {text-transform: uppercase; font-weight: 300;}
+table td {text-align: center; padding: 10px;}
+
 /* ----------------- @media overrides for particular cases ----------------- */
 
 @media

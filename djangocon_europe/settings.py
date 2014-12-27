@@ -349,6 +349,7 @@ CMS_MEDIA_URL = STATIC_URL + 'cms/'
 
 CMS_TEMPLATES = (
     ('djangocon.html', gettext('DjangoCon')),
+    ('djangocontito.html', gettext('DjangoCon with Tito form')),
     ('djangoconminimal.html', gettext('DjangoCon minimal')),
 )
 
@@ -402,6 +403,7 @@ WYM_TOOLS = ",\n".join([
     "{'name': 'Undo', 'title': 'Undo', 'css': 'wym_tools_undo'}",
     "{'name': 'Redo', 'title': 'Redo', 'css': 'wym_tools_redo'}",
     "{'name': 'ToggleHtml', 'title': 'HTML', 'css': 'wym_tools_html'}",
+    "{'name': 'InsertTable', 'title': 'Table', 'css': 'wym_tools_table'}",
 ])
 
 WYM_CONTAINERS = ",\n".join([
@@ -414,7 +416,9 @@ WYM_CONTAINERS = ",\n".join([
     "{'name': 'H6', 'title': 'Heading_6', 'css': 'wym_containers_h6'}",
 #    "{'name': 'PRE', 'title': 'Preformatted', 'css': 'wym_containers_pre'}",
    "{'name': 'BLOCKQUOTE', 'title': 'Blockquote', 'css': 'wym_containers_blockquote'}",
-   # "{'name': 'TH', 'title': 'Table_Header', 'css': 'wym_containers_th'}", # not ready for this yet
+   "{'name': 'TH', 'title': 'Table_Header', 'css': 'wym_containers_th'}", # not ready for this yet
 ])
+
+SEMANTICEDITOR_DISALLOWED_ELEMENTS = ['span', 'li p:only-child']
 
 from arkestra_settings import *# import pdb; pdb.set_trace()
