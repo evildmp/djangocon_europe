@@ -13,3 +13,4 @@ django_polymorphic
 -e git+git://github.com/evildmp/django-filer.git@video#egg=django-filer-video
 -e hg+https://bitbucket.org/evildmp/semanticeditor#egg=semanticeditor
 -e git+git://github.com/evildmp/django-widgetry.git#egg=django-widgetry
+-e git+git@github.com:evildmp/facts.git#egg=facts
