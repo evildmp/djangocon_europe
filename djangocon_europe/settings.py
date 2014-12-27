@@ -173,7 +173,7 @@ INSTALLED_APPS = (
     'video',
     'housekeeping',
 
-    # "facts",
+    "facts",
 
     # other applications
 

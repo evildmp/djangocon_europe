@@ -1,0 +1,40 @@
+{% extends "djangocon.html" %}
+{% load typogrify_tags cms_tags %}
+
+{% block extrastyles %}
+    <style>
+        ol.factslist {
+            list-style-type: none;
+            counter-reset: ol-counter;
+        }
+        ol.factslist > li:before {
+            content: counter(ol-counter) ".";
+            counter-increment: ol-counter;
+            color: #7f0000;
+        	position: absolute; top: 0; left: 0;
+        	font-size: 200%; font-weight: 300;
+        }
+        ol.factslist li {
+        	position: relative;
+        	padding: 4px 0 30px 50px;
+            line-height: 1.6;
+        }
+    </style>
+{% endblock extrastyles %}
+
+{% block main_page_body %}
+    {% block pagetitle %}
+        <div id="pagetitle">
+			{% if not current_page.flags.no_page_title %}
+	           	<h{{PAGE_TITLE_HEADING_LEVEL}}>{% filter amp|smartypants|caps|initial_quotes %}{% page_attribute title %}{% endfilter %}</h{{PAGE_TITLE_HEADING_LEVEL}}>
+			{% endif %}
+        </div>
+	{% endblock pagetitle %}
+
+        <ol class="factslist">
+            {% for fact in facts reversed %}
+                <li>{{ fact.text }}</li>
+            {% endfor %}
+        </ol>
+
+{% endblock main_page_body %}
