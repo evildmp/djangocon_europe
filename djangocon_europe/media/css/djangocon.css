@@ -82,10 +82,11 @@ ul.plugin-list li.grouper {font-weight: 300;}
 
 /* the whole thing */
 
-nav {margin-bottom: 34px;}
+nav {margin-bottom: 34px; line-height: 1;}
+nav ul {padding: 0;}
 
 ul.menu	{
-    padding: 0; margin: 0;
+    width: auto;
 	text-align: center;
     z-index: 200;
     position: relative;
@@ -94,17 +95,40 @@ ul.menu	{
 ul.menu li	{
 	display: inline;
 	list-style-type: none;
-	}
+	padding-bottom: 0px;
+}
 
-/* 2nd level list */
 ul.menu ul {
     display: inline;
 }
 
 ul.menu ul li {
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 10px;
+    padding-right: 0px;
 }
+
+ul.menu ul ul { /* 3rd level list - off by default */
+	position: absolute;
+    left: -9999em;
+    display: block;
+    padding: 20px 0 30px;
+    text-align: center;
+    font-weight: 300;
+    width: 100%;
+}
+
+ul.menu ul li:hover ul { /* hovering over 2nd level displays third */
+	left: 0;
+}
+
+ul.menu ul ul li {
+    display: inline;
+    background: white;
+    padding: 10px 10px 0 10px;
+    border-top: 1px solid gray;
+}
+
+ul.menu ul ul li a {background: white;}
 
 /* menu list anchors */
 li.menu_item a	{
@@ -112,12 +136,10 @@ li.menu_item a	{
 	border: none;
 }
 
-li.menu_item a.selected	{
-}
+li.menu_item a:hover {border-bottom: 2px solid #7f0000;}
+ul.menu ul ul li.menu_item a:hover {border-bottom: 1px solid #7f0000;}
 
-li.menu_item a:hover	{
-	border-bottom: 2px solid #7f0000;
-	}
+li li.menu_item a.children:after {content: " \25BE"}
 
 /* ------ the tab menu, as used for People and Places ------ */
 
