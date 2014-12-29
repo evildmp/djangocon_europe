@@ -210,8 +210,18 @@ p.centre {text-align: center; margin-top: 5em; color: #7f0000; font-weight: 300;
 
 /* ----------------- tables ----------------- */
 
-table th {text-transform: uppercase; font-weight: 300;}
+table {width: 100%;}
+table th {
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 10px;
+    text-align: right;
+    color: #7f0000;
+}
 table td {text-align: center; padding: 10px;}
+table tr {border-top: 1px solid gray;}
+table tr:first-child {border-top: none;}
+table tr:first-child th {text-align: center;}
 
 /* ----------------- @media overrides for particular cases ----------------- */
 
