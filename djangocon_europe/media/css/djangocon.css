@@ -37,7 +37,7 @@ div#outer-wrapper   {
 }
 
 div#inner-wrapper   {
-    padding: 150px 0 10px;
+    padding: 140px 0 10px;
     margin: 0;
     background: #fff url("/media/djeu15banner1.gif") center 0 no-repeat;
 }
@@ -82,7 +82,7 @@ ul.plugin-list li.grouper {font-weight: 300;}
 
 /* the whole thing */
 
-nav {margin-bottom: 34px; line-height: 1;}
+nav {margin-bottom: 44px; line-height: 1;}
 nav ul {padding: 0;}
 
 ul.menu	{
@@ -120,6 +120,8 @@ ul.menu ul ul { /* 3rd level list - off by default */
 ul.menu ul li:hover ul { /* hovering over 2nd level displays third */
 	left: 0;
 }
+
+ul.menu ul li a.selected + ul {left: 0;}
 
 ul.menu ul ul li {
     display: inline;
