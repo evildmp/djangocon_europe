@@ -29,26 +29,20 @@ a:link, a:visited {color: #7f0000;}
 
 /* ----------------- page layout components ----------------- */
 
-div#outer-wrapper   {
+div#outer-wrapper {
     padding: 0px 0 5px;
     margin: 0 auto;
     background: white;
     width: 960px;
 }
 
-div#inner-wrapper   {
+div#inner-wrapper {
     padding: 140px 0 10px;
     margin: 0;
     background: #fff url("/media/djeu15banner1.gif") center 0 no-repeat;
 }
 
-/* for consistency, so that first children's margins don't collapse, just like
-   floated columns' margins don't */
-div#main-page-body {overflow: hidden;}
-
-div.footer  {
-    border-top: 1px solid black;
-}
+div.footer {border-top: 1px solid black;}
 
 /* ----------------- variations ----------------- */
 
