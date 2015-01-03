@@ -200,7 +200,7 @@ p.subtitle.place {border: none;}
 .buttonise a:link:hover, .buttonise a:visited:hover {
     background: white; color: #7f0000;
 }
-p.centre {text-align: center; margin-top: 5em; color: #7f0000; font-weight: 300;}
+p.centre {text-align: center;}
 
 /* ----------------- tables ----------------- */
 
