@@ -351,6 +351,7 @@ CMS_TEMPLATES = (
     ('djangocon.html', gettext('DjangoCon')),
     ('djangocontito.html', gettext('DjangoCon with Tito form')),
     ('djangoconminimal.html', gettext('DjangoCon minimal')),
+    ('djangoconsuspended.html', gettext('Regsistration suspended')),
 )
 
 CMS_PAGE_FLAGS = (

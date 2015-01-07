@@ -1,0 +1,39 @@
+{% extends "arkestra.html" %}
+{% load typogrify_tags cms_tags %}
+
+{% block body_attributes %}{{ block.super }}{% page_attribute "slug" as home_test %}{% ifequal home_test "home" %}{% if not entity %} class="minimal" {% endif %}{% endifequal %}{% endblock body_attributes %}
+
+{% block site_styles %}
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/djangocon.css" />
+    <style>
+        body {background: #aaa;}
+        div#inner-wrapper {background: #aaa;}
+        div#urgent {
+            position: fixed; background: white; margin-left: 10%; margin-right: 10%;
+            width: 60%;
+            border: 1px solid black;
+            padding: 10%; z-index: 1000;
+        }
+    </style>
+{% endblock site_styles %}
+
+{% block favicon %}
+    <link rel="icon" type="image/png" href="{{ MEDIA_URL }}favicon.png">
+{% endblock favicon %}
+
+{% block body_content %}
+    <p class="accessibility">DjangoCon Europe, 2nd to 7th June 2015, in Cardiff, Wales.
+        6 days of talks, tutorials and code.</p>
+    {# do you need to have different widths in this template? manage them like this: with placeholder_width=960 generic_main_width=523 sidebar_image_size="294x196" person_image_size="445x384" #}
+    <div id="urgent">
+        <h1>Registration is temporarily  suspended</h1>
+        <p>We're sorry to announce that with immediate effect we have been forced to
+            suspend ticket sales <em>temporarily</em>. We will open registration again
+            as soon as possible - but don't worry, we <em>will</em> be back.</p>
+            <p>Many apologies, and thanks for your patience, from the DjangoCon Europe 2015 team.</p>
+    </div>
+        {{ block.super }}
+    {# endwith #}
+{% endblock body_content %}
+
+{% block people_search %}{% endblock people_search %}
