@@ -39,7 +39,7 @@ div#outer-wrapper {
 div#inner-wrapper {
     padding: 135px 0 10px;
     margin: 0;
-    background: #fff url("/media/djeu15banner1.gif") center 0 no-repeat;
+    background: #fff url("/media/djeu15-rev-small.gif") center 0 no-repeat;
 }
 
 div.footer {border-top: 1px solid black;}
@@ -223,7 +223,7 @@ table tr:first-child th {text-align: center;}
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     div#inner-wrapper   {
-        background: #fff url("/media/djeu15banner2.gif") center 0px no-repeat;
+        background: #fff url("/media/djeu15-rev-large.gif") center 0px no-repeat;
         background-size: 100%;
     }
 }
