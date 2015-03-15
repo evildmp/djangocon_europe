@@ -202,6 +202,12 @@ p.subtitle.place {border: none;}
 }
 p.centre {text-align: center;}
 
+.no-titles .imageset .image .image-title {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 /* ----------------- tables ----------------- */
 
 table {width: 100%;}
