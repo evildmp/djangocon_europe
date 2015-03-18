@@ -203,11 +203,10 @@ p.subtitle.place {border: none;}
 p.centre {text-align: center;}
 
 .no-titles .imageset .image .image-title.text {
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    background: none;
-}
+    /* 120% indent is a hurried hack here for Firefox because otherwise the text becomes
+    invisible in the padding */
+    text-indent: 120%; white-space: nowrap; overflow: hidden;
+    }
 
 .no-titles .imageset a:link:hover {
     border-radius: 2px;
