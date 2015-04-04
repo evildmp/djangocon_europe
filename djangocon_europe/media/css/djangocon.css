@@ -200,7 +200,7 @@ p.subtitle.place {border: none;}
 .buttonise a:link:hover, .buttonise a:visited:hover {
     background: white; color: #7f0000;
 }
-p.centre {text-align: center;}
+p.centre, h2.centre {text-align: center;}
 
 .no-titles .imageset .image .image-title.text {
     /* 120% indent is a hurried hack here for Firefox because otherwise the text becomes
