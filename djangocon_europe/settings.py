@@ -1,6 +1,6 @@
 # Django settings for djangocon_europe project.
 
-from secret_settings import DATABASES, SECRET_KEY
+from secret_settings import DATABASES, SECRET_KEY, OPBEAT
 
 import os.path
 
