@@ -9,6 +9,7 @@ django-filer
 django-appmedia
 django-celery
 django_polymorphic
+opbeat==2.0.3
 
 -e git+git://github.com/evildmp/django-filer.git@video#egg=django-filer-video
 -e hg+https://bitbucket.org/evildmp/semanticeditor#egg=semanticeditor
