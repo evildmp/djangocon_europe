@@ -1,6 +1,6 @@
 # Django settings for djangocon_europe project.
 
-from secret_settings import DATABASES, SECRET_KEY
+from secret_settings import DATABASES, SECRET_KEY, OPBEAT
 
 import os.path
 
@@ -119,6 +119,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'opbeat.contrib.django.middleware.OpbeatAPMMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -188,6 +189,7 @@ INSTALLED_APPS = (
     'treeadmin',
     'pagination',
     'chained_selectbox',
+    'opbeat.contrib.django',
 
     # core Django applications
     # these should be last, so we can override their templates
