@@ -187,6 +187,15 @@ p.standout, div.row.standout, p.subtitle {
     border-bottom: 1px solid gray;
 }
 
+p.standout-mild, div.row.standout-mild {
+    font-family:"Hoefler Text", "Didot", Georgia, serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #7f0000;
+    padding: 1em 2em;
+    margin: 1em 0;
+}
+
 p.subtitle.place {border: none;}
 
 .border-top {padding: 1em 0 0; margin: 1em 0; border-top: 1px solid gray;}
