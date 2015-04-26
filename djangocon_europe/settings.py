@@ -127,7 +127,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
+    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
     # 'cms.middleware.multilingual.MultilingualURLMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
@@ -203,7 +203,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.humanize',
-    'django.contrib.markup'
+    'django.contrib.markup',
+    'django.contrib.redirects',
 )
 
 # A sample logging configuration. The only tangible logging
