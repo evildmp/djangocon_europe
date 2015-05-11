@@ -418,7 +418,7 @@ WYM_CONTAINERS = ",\n".join([
     "{'name': 'H4', 'title': 'Heading_4', 'css': 'wym_containers_h4'}",
     "{'name': 'H5', 'title': 'Heading_5', 'css': 'wym_containers_h5'}",
     "{'name': 'H6', 'title': 'Heading_6', 'css': 'wym_containers_h6'}",
-#    "{'name': 'PRE', 'title': 'Preformatted', 'css': 'wym_containers_pre'}",
+   "{'name': 'PRE', 'title': 'Preformatted', 'css': 'wym_containers_pre'}",
    "{'name': 'BLOCKQUOTE', 'title': 'Blockquote', 'css': 'wym_containers_blockquote'}",
    "{'name': 'TH', 'title': 'Table_Header', 'css': 'wym_containers_th'}", # not ready for this yet
 ])

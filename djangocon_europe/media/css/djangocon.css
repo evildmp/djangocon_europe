@@ -25,6 +25,8 @@ em {color: #7f0000; font-weight: 400;}
 
 p {margin-bottom: 1em; line-height: 1.6; }
 
+pre {margin: 1em 0 1em 2em ;}
+
 a:link, a:visited {color: #7f0000;}
 
 /* ----------------- page layout components ----------------- */
