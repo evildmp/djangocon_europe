@@ -118,8 +118,9 @@ ul.menu ul li.ancestor ul {left: 0;}
 ul.menu ul ul li {
     display: inline;
     background: white;
-    padding: 10px 10px 0 10px;
+    padding: 10px 5px 0 5px;
     border-top: 1px solid gray;
+    letter-spacing: -0.05em;
 }
 
 ul.menu ul ul li a {background: white;}
